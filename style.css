@@ -1,0 +1,66 @@
+    body {
+      background: #222;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    /* النص */
+    h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    h2 span {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 span:nth-child(1) { animation-delay: 0s; }
+    h2 span:nth-child(2) { animation-delay: 0.5s; }
+    h2 span:nth-child(3) { animation-delay: 1s; }
+    h2 span:nth-child(4) { animation-delay: 1.5s; }
+    h2 span:nth-child(5) { animation-delay: 2s; }
+    h2 span:nth-child(6) { animation-delay: 2.5s; }
+
+    .eyes {
+      display: flex;
+      gap: 30px;
+    }
+
+    .eye {
+      width: 120px;
+      height: 200px;
+      background: #eef4f8;
+      border-radius: 60px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .pupil {
+      width: 60px;
+      height: 60px;
+      background: black;
+      border-radius: 50%;
+      animation: movePupil 1s infinite alternate ease-in-out;
+    }
+
+    @keyframes movePupil {
+      from { transform: translateX(0); }
+      to   { transform: translateX(80px); }
+    }
